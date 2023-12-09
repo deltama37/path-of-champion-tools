@@ -46,9 +46,9 @@ export const mapDataList: { name: string; experience: number }[] = [
   { name: "カイ＝サ(7戦) or スレッシュ(7戦)", experience: 1925 },
   { name: "ガリオ(9戦)", experience: 3100 },
   { name: "オレリオン・ソル(12戦)", experience: 4505 },
-  { name: "ウィークリーアドベンチャー☆0.5", experience: 170 },
+  { name: "ウィークリーアドベンチャー☆0.5(7戦)", experience: 170 },
   { name: "ウィークリーアドベンチャー☆3.5(3戦)", experience: 1230 },
-  { name: "ウィークリーアドベンチャー☆3.5", experience: 3015 },
+  { name: "ウィークリーアドベンチャー☆3.5(7戦)", experience: 3015 },
   { name: "ウィークリーアドベンチャー☆4(3戦)", experience: 1505 },
-  { name: "ウィークリーアドベンチャー☆4", experience: 3200 },
+  { name: "ウィークリーアドベンチャー☆4(7戦)", experience: 3200 },
 ];

@@ -35,20 +35,28 @@ export const levelDataList: {
   { level: 30, threshold: 4370, totalThreshold: 51290 },
 ];
 
-export const mapDataList: { name: string; experience: number }[] = [
-  { name: "ティーモ(4戦)", experience: 100 },
-  { name: "ガレン(7戦) or ルル(7戦)", experience: 305 },
-  { name: "ガングプランク(7戦) or エズリアル(7戦)", experience: 605 },
-  { name: "ゼド(7戦) or ノーチラス", experience: 985 },
-  { name: "ゼド(8戦)", experience: 1110 },
-  { name: "ビクター(6戦)", experience: 1245 },
-  { name: "ビクター(7戦) or ドレイブン(7戦)", experience: 1425 },
-  { name: "カイ＝サ(7戦) or スレッシュ(7戦)", experience: 1925 },
-  { name: "ガリオ(9戦)", experience: 3100 },
-  { name: "オレリオン・ソル(12戦)", experience: 4505 },
-  { name: "ウィークリーアドベンチャー☆0.5(7戦)", experience: 170 },
-  { name: "ウィークリーアドベンチャー☆3.5(3戦)", experience: 1230 },
-  { name: "ウィークリーアドベンチャー☆3.5(7戦)", experience: 3015 },
-  { name: "ウィークリーアドベンチャー☆4(3戦)", experience: 1505 },
-  { name: "ウィークリーアドベンチャー☆4(7戦)", experience: 3200 },
+export const mapDataList: {
+  name: string;
+  experience: number;
+  matches: number;
+}[] = [
+  { name: "ティーモ(4戦)", experience: 100, matches: 4 },
+  { name: "ガレン(7戦) or ルル(7戦)", experience: 305, matches: 7 },
+  {
+    name: "ガングプランク(7戦) or エズリアル(7戦)",
+    experience: 605,
+    matches: 7,
+  },
+  { name: "ゼド(7戦) or ノーチラス", experience: 985, matches: 7 },
+  { name: "ゼド(8戦)", experience: 1110, matches: 8 },
+  { name: "ビクター(6戦)", experience: 1245, matches: 6 },
+  { name: "ビクター(7戦) or ドレイブン(7戦)", experience: 1425, matches: 7 },
+  { name: "カイ＝サ(7戦) or スレッシュ(7戦)", experience: 1925, matches: 7 },
+  { name: "ガリオ(9戦)", experience: 3100, matches: 9 },
+  { name: "オレリオン・ソル(12戦)", experience: 4505, matches: 12 },
+  { name: "ウィークリーアドベンチャー☆0.5(7戦)", experience: 170, matches: 7 },
+  { name: "ウィークリーアドベンチャー☆3.5(3戦)", experience: 1230, matches: 3 },
+  { name: "ウィークリーアドベンチャー☆3.5(7戦)", experience: 3015, matches: 7 },
+  { name: "ウィークリーアドベンチャー☆4(3戦)", experience: 1505, matches: 3 },
+  { name: "ウィークリーアドベンチャー☆4(7戦)", experience: 3200, matches: 7 },
 ];

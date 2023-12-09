@@ -1,39 +1,12 @@
 "use client";
 
-import { Box, FormControl, Text } from "@chakra-ui/react";
-import { FC, useState } from "react";
-import { levelDataList, mapDataList } from "../data";
-import { InputExp } from "./input-exp";
-import { InputTargetLevel } from "./input-target-level";
-import { RequiredExp } from "./required-exp";
-
-const ExpInfo: FC<{ targetLevel: number }> = ({ targetLevel }) => {
-  const levelData = levelDataList.find(
-    (levelData) => levelData.level === targetLevel
-  );
-
-  if (levelData == null) {
-    return <></>;
-  }
-
-  return (
-    <>
-      {mapDataList.map((mapData) => (
-        <Box
-          justifyContent={"center"}
-          alignItems={"center"}
-          key={mapData.name}
-          mb={2}
-        >
-          <Text>{mapData.name}</Text>
-          <Text textAlign={"right"}>
-            {Math.ceil(levelData.totalThreshold / mapData.experience)}周
-          </Text>
-        </Box>
-      ))}
-    </>
-  );
-};
+import { ExpInfo } from "@/app/components/exp-info";
+import { InputExp } from "@/app/components/input-exp";
+import { InputTargetLevel } from "@/app/components/input-target-level";
+import { RequiredExp } from "@/app/components/required-exp";
+import { levelDataList } from "@/app/data";
+import { Box, FormControl } from "@chakra-ui/react";
+import { useState } from "react";
 
 export const InputForm = () => {
   const [currentExp, setCurrentExp] = useState(0);

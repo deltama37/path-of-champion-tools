@@ -1,6 +1,6 @@
 "use client";
 
-import { Box, Flex, FormControl, Text } from "@chakra-ui/react";
+import { Box, FormControl, Text } from "@chakra-ui/react";
 import { FC, useState } from "react";
 import { levelDataList, mapDataList } from "../data";
 import { InputExp } from "./input-exp";
@@ -19,17 +19,17 @@ const ExpInfo: FC<{ targetLevel: number }> = ({ targetLevel }) => {
   return (
     <>
       {mapDataList.map((mapData) => (
-        <Flex
+        <Box
           justifyContent={"center"}
           alignItems={"center"}
           key={mapData.name}
           mb={2}
         >
-          <Text minW={320}>{mapData.name}</Text>
-          <Text minW={16} textAlign={"right"}>
+          <Text>{mapData.name}</Text>
+          <Text textAlign={"right"}>
             {Math.ceil(levelData.totalThreshold / mapData.experience)}周
           </Text>
-        </Flex>
+        </Box>
       ))}
     </>
   );
@@ -48,15 +48,15 @@ export const InputForm = () => {
       <Box>
         <InputExp setCurrentExp={setCurrentExp} />
       </Box>
-      <Box mt={4}>
+      <Box mt={2}>
         <InputTargetLevel setTargetLevel={setTargetLevel} />
       </Box>
 
-      <Box mt={16}>
+      <Box mt={6}>
         <RequiredExp requiredExp={requiredExp} />
       </Box>
 
-      <Box mt={16}>
+      <Box mt={6}>
         <ExpInfo targetLevel={targetLevel} />
       </Box>
     </FormControl>

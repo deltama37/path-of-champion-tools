@@ -30,7 +30,7 @@ export const InputForm = () => {
       </Box>
 
       <Box mt={6}>
-        <ExpInfo targetLevel={targetLevel} />
+        <ExpInfo requiredExp={requiredExp} />
       </Box>
     </FormControl>
   );

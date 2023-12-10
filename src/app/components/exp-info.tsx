@@ -1,16 +1,8 @@
-import { levelDataList, mapDataList } from "@/app/data";
+import { mapDataList } from "@/app/data";
 import { Box, Text } from "@chakra-ui/react";
 import { FC } from "react";
 
-export const ExpInfo: FC<{ targetLevel: number }> = ({ targetLevel }) => {
-  const levelData = levelDataList.find(
-    (levelData) => levelData.level === targetLevel
-  );
-
-  if (levelData == null) {
-    return <></>;
-  }
-
+export const ExpInfo: FC<{ requiredExp: number }> = ({ requiredExp }) => {
   return (
     <>
       {mapDataList.map((mapData) => (
@@ -22,10 +14,9 @@ export const ExpInfo: FC<{ targetLevel: number }> = ({ targetLevel }) => {
         >
           <Text>{mapData.name}</Text>
           <Text textAlign={"right"}>
-            {Math.ceil(levelData.totalThreshold / mapData.experience)}周/
-            {Math.ceil(levelData.totalThreshold / mapData.experience) *
-              mapData.matches}
-            戦
+            {Math.ceil(requiredExp / mapData.experience)}
+            周/
+            {Math.ceil(requiredExp / mapData.experience) * mapData.matches}戦
           </Text>
         </Box>
       ))}
